@@ -1,4 +1,5 @@
-![Banner]https://github.com/Krishna-Raveendran08/Spotify_Analysis_SQL/blob/main/spotify-1759471_1280.webp
+![Banner](https://github.com/username/repo-name/blob/main/banner.png?raw=true)
+
 # 🎵 Advanced SQL Project – Spotify Dataset Analysis
 
 ## **Overview**
