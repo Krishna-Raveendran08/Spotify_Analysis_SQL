@@ -1,5 +1,7 @@
 # 🎵 Advanced SQL Project – Spotify Dataset Analysis
 
+Click Here to get Dataset: https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset
+
 ## **Overview**
 This project demonstrates advanced SQL skills using a **Spotify dataset**. It focuses on **data cleaning, transformation, aggregation, and analysis** to extract actionable insights about tracks, artists, and albums.
 
