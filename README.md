@@ -29,4 +29,65 @@ The dataset contains Spotify tracks with fields such as:
 SELECT track 
 FROM spotify
 WHERE stream > 1000000000;
-'''
+
+**Q2: List all albums along with their respective artists**
+```sql
+SELECT DISTINCT album, artist 
+FROM spotify
+ORDER BY 1;
+```
+
+**Q3: Get the total number of comments for tracks where licensed = TRUE**
+```sql
+SELECT SUM(comments) AS total_comments 
+FROM spotify
+WHERE licensed = 'true';
+```
+
+**Q4: Find all tracks that belong to the album type 'single'**
+```sql
+SELECT track 
+FROM spotify
+WHERE album_type = 'single';
+```
+
+**Q5: Count the total number of tracks by each artist**
+```sql
+SELECT artist, COUNT(*) AS total_no_songs
+FROM spotify
+GROUP BY 1
+ORDER BY 2;
+```
+
+**Q6: Calculate the average danceability of tracks in each album**
+```sql
+SELECT album, AVG(danceability) AS avg_danceability
+FROM spotify
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+**Q7: Find the top 5 tracks with the highest energy values**
+```sql
+SELECT track, MAX(energy) AS max_energy
+FROM spotify
+GROUP BY 1
+ORDER BY 2
+LIMIT 5;
+```
+
+**Q8: List all tracks along with their views and likes where official_video = TRUE**
+```sql
+SELECT track, SUM(views) AS total_views, SUM(likes) AS total_likes
+FROM spotify
+WHERE official_video = 'true'
+GROUP BY 1;
+```
+
+**Q9: For each album, calculate the total views of all associated tracks**
+```sql
+SELECT album, track, SUM(views) AS total_views
+FROM spotify
+GROUP BY 1, 2
+ORDER BY 3 DESC;
+```
